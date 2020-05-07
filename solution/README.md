@@ -29,11 +29,11 @@
 * **You can use heroku or your local endpoint**
 
 * Base endpoint:
-    ```
-    https://pland-api-lucasgsouza03.herokuapp.com/
-    http://localhost:8000/
-    http://127.0.0.1:8000/
-    ```
+    
+        https://pland-api-lucasgsouza03.herokuapp.com/
+        http://localhost:8000/
+        http://127.0.0.1:8000/
+    
 
 * Before you must define the requequest:
          
@@ -41,7 +41,7 @@
         from requests.auth import HTTPBasicAuth  
 
         url = 'https://$url-to-api/place/'
-        ```
+        
 
 * Request Syntax to create a place:
         
