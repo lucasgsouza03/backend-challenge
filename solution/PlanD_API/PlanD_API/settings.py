@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -92,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'places',
         'USER': 'postgres',
-        'PASSWORD': 'Z3ld4100%',
+        'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -152,5 +151,3 @@ ALLOWED_HOSTS = ['*']
 
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-django_heroku.settings(locals())
