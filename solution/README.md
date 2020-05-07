@@ -36,73 +36,79 @@
     ```
 
 * Before you must define the requequest:
-    
-    import requests
-    from requests.auth import HTTPBasicAuth  
+       ```    
+        import requests
+        from requests.auth import HTTPBasicAuth  
 
-    url = 'https://$url-to-api/place/'
+        url = 'https://$url-to-api/place/'
+        ```
 
 * Request Syntax to create a place:
-    
-    data={
-        "name": "String",
-        "slug": "String",
-        "city": "String",
-        "state": "String"
-    }
-    
-    response = requests.post(url, data, auth=('user_created', 'password_created'))
+        ```
+        data={
+            "name": "String",
+            "slug": "String",
+            "city": "String",
+            "state": "String"
+        }
+        
+        response = requests.post(url, data, auth=('user_created', 'password_created'))
+        ```
 
 * Request Syntax to update a place:
-    
-    url = url + '<slug>/'
-    data={
-        "name": "String",
-        "slug": "String",
-        "city": "String",
-        "state": "String"
-    }
-    response = requests.put(url, data, auth=('user_created', 'password_created'))
+        ```
+        url = url + '<slug>/'
+        data={
+            "name": "String",
+            "slug": "String",
+            "city": "String",
+            "state": "String"
+        }
+        response = requests.put(url, data, auth=('user_created', 'password_created'))
+        ```
 
 * Request Syntax to get all places:
-    
-    response = requests.get(url, auth=('user_created', 'password_created'))
+        ```   
+        response = requests.get(url, auth=('user_created', 'password_created'))
+        ```
 
 * Request Syntax to get a specific place:
-    
-    url = url + '<slug>/'
-    response = requests.get(url, auth=('user_created', 'password_created'))
-    
+        ```
+        url = url + '<slug>/'
+        response = requests.get(url, auth=('user_created', 'password_created'))
+        ```
+
 * Request Syntax to delete a place:
-    
-    url = url + '<slug>/'
-    response = requests.put(url, auth=('user_created', 'password_created'))
+        ```
+        url = url + '<slug>/'
+        response = requests.put(url, auth=('user_created', 'password_created'))
+        ```
 
 * Response Syntax to create, update and get a specific place:
     
-    {
-        "id": Int,
-        "name": String,
-        "slug": "String",
-        "city": "String",
-        "state": "String",
-        "created_at": "String"
-        "updated_at": "String"
-    }
-
-* Response Syntax to list places:
-    
-    [
         {
             "id": Int,
             "name": String,
-            "slug": "Slug",
+            "slug": "String",
             "city": "String",
             "state": "String",
             "created_at": "String"
             "updated_at": "String"
         }
-    ]
+
+* Response Syntax to list places:
+    
+        [
+            {
+                "id": Int,
+                "name": String,
+                "slug": "Slug",
+                "city": "String",
+                "state": "String",
+                "created_at": "String"
+                "updated_at": "String"
+            }
+        ]
 
 * Delete a place returns 204 status only.
     * Delete without passing slug is considered not allowed for safety
