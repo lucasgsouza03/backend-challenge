@@ -25,7 +25,7 @@ SECRET_KEY = 'svd&*yjq_3o&ij5e(a3dg*biy@+!!x7=233ky8evq(vyssaci$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'testserver']
 
 
 # Application definition
@@ -74,11 +74,24 @@ WSGI_APPLICATION = 'PlanD_API.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# configuration of SQLite database
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+'''
+#configuration of PostgreeSQL database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'places',
+        'USER': 'postgres',
+        'PASSWORD': 'Z3ld4100%',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
