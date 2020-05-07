@@ -1,3 +1,5 @@
+import json
+
 from rest_framework import viewsets, status
 from rest_framework import permissions
 from rest_framework.response import Response as response
@@ -6,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from API.models import Place
 from API.serializers import PlaceSerializer
+from rest_framework.renderers import JSONOpenAPIRenderer
 
 
 # Create your views here.
