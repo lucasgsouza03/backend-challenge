@@ -36,7 +36,7 @@
     ```
 
 * Before you must define the requequest:
-       ```    
+         
         import requests
         from requests.auth import HTTPBasicAuth  
 
@@ -44,7 +44,7 @@
         ```
 
 * Request Syntax to create a place:
-        ```
+        
         data={
             "name": "String",
             "slug": "String",
@@ -53,10 +53,10 @@
         }
         
         response = requests.post(url, data, auth=('user_created', 'password_created'))
-        ```
+        
 
 * Request Syntax to update a place:
-        ```
+        
         url = url + '<slug>/'
         data={
             "name": "String",
@@ -65,24 +65,21 @@
             "state": "String"
         }
         response = requests.put(url, data, auth=('user_created', 'password_created'))
-        ```
+        
 
 * Request Syntax to get all places:
-        ```   
+          
         response = requests.get(url, auth=('user_created', 'password_created'))
-        ```
 
 * Request Syntax to get a specific place:
-        ```
+
         url = url + '<slug>/'
         response = requests.get(url, auth=('user_created', 'password_created'))
-        ```
 
 * Request Syntax to delete a place:
-        ```
+        
         url = url + '<slug>/'
         response = requests.put(url, auth=('user_created', 'password_created'))
-        ```
 
 * Response Syntax to create, update and get a specific place:
     
